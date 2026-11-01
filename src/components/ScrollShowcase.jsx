@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useLayoutEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { 
   Sparkles, Code2, Trophy, Award, ArrowRight, 
@@ -7,6 +7,29 @@ import {
 
 export const ScrollShowcase = ({ onOpenJoinModal }) => {
   const containerRef = useRef(null);
+  const trackRef = useRef(null);
+  const shiftRef = useRef({ start: 16, end: 0 });
+
+  // Measure the real track width so the last card always lands on screen
+  // (works on any phone/desktop width instead of a fixed percentage).
+  useLayoutEffect(() => {
+    const measure = () => {
+      const track = trackRef.current;
+      if (!track) return;
+      const vw = document.documentElement.clientWidth;
+      const start = vw < 640 ? 16 : Math.max(24, vw * 0.05);
+      const end = Math.max(0, track.scrollWidth - vw + (vw < 640 ? 16 : 48));
+      shiftRef.current = { start, end };
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    const ro = new ResizeObserver(measure);
+    if (trackRef.current) ro.observe(trackRef.current);
+    return () => {
+      window.removeEventListener('resize', measure);
+      ro.disconnect();
+    };
+  }, []);
 
   // Hook to track vertical scroll within this 300vh tall container
   const { scrollYProgress } = useScroll({
@@ -23,7 +46,10 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
 
   // Transform vertical scroll progress (0 to 1) into horizontal translation
   // Moves from 0% to approximately -72% to bring all 4 cards across the screen
-  const x = useTransform(smoothProgress, [0, 1], ['5%', '-76%']);
+  const x = useTransform(smoothProgress, (p) => {
+    const { start, end } = shiftRef.current;
+    return start + p * (-end - start);
+  });
 
   // Dynamic ambient glow color shifting as you scroll down
   const bgGlow = useTransform(
@@ -127,7 +153,7 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
       className="relative h-[340vh] bg-slate-950 text-white select-none"
     >
       {/* Sticky Window Container (Sticks as user scrolls vertically down 340vh) */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between overflow-hidden pt-24 pb-8 sm:pt-28 sm:pb-10">
+      <div className="sticky top-0 h-[100svh] w-full flex flex-col justify-between overflow-hidden pt-20 pb-4 sm:pt-28 sm:pb-10">
         
         {/* Dynamic Animated Ambient Background Glow (Changes color as cards slide) */}
         <motion.div
@@ -144,15 +170,8 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
                 <span>Interactive Scroll Experience</span>
               </div>
               <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
-                How You Transform With Us{' '}
-                <span className="text-slate-400 font-normal text-xl sm:text-2xl block sm:inline">
-                </span>
+                How You Transform With Us
               </h2>
-            </div>
-
-            {/* Scroll Indicator Badge */}
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-mono text-slate-400">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             </div>
           </div>
         </div>
@@ -160,13 +179,14 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
         {/* Horizontal Sliding Cards Track */}
         <div className="relative w-full overflow-visible py-4 z-10">
           <motion.div
+            ref={trackRef}
             style={{ x }}
-            className="flex gap-6 sm:gap-8 items-center"
+            className="flex gap-4 sm:gap-8 items-center w-max will-change-transform"
           >
             {cards.map((card, idx) => (
               <div
                 key={idx}
-                className="w-[88vw] sm:w-[620px] lg:w-[720px] shrink-0 h-[460px] sm:h-[490px] rounded-3xl bg-slate-900/90 backdrop-blur-xl border border-slate-800 p-6 sm:p-10 shadow-2xl flex flex-col justify-between relative overflow-hidden group hover:border-slate-700 transition-colors"
+                className="w-[88vw] sm:w-[620px] lg:w-[720px] shrink-0 h-[420px] sm:h-[490px] rounded-3xl bg-slate-900/90 backdrop-blur-xl border border-slate-800 p-5 sm:p-10 shadow-2xl flex flex-col justify-between relative overflow-hidden group hover:border-slate-700 transition-colors"
               >
                 {/* Colored Top Accent Bar */}
                 <div
@@ -202,13 +222,13 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
                     {card.features.map((feat, fIdx) => (
                       <div key={fIdx} className="flex items-center gap-2 text-xs text-slate-300">
                         <CheckCircle2 size={14} style={{ color: card.accent }} className="flex-shrink-0" />
-                        <span className="truncate">{feat}</span>
+                        <span className="sm:truncate">{feat}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Micro Code Terminal */}
-                  <div className="bg-slate-950 p-3 rounded-xl border border-slate-800/90 font-mono text-[11px] text-slate-400 space-y-1 overflow-hidden">
+                  <div className="hidden sm:block bg-slate-950 p-3 rounded-xl border border-slate-800/90 font-mono text-[11px] text-slate-400 space-y-1 overflow-hidden">
                     <div className="text-[10px] text-slate-500 pb-1 border-b border-slate-800 flex items-center justify-between">
                       <span>{card.codePreview.title}</span>
                       <span className="w-2 h-2 rounded-full" style={{ backgroundColor: card.accent }} />
@@ -240,10 +260,10 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
 
         {/* Bottom Interactive Scroll Progress Bar & Stage Dots */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-          <div className="bg-slate-900/90 backdrop-blur-md rounded-2xl p-4 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="bg-slate-900/90 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
             
             {/* Stage Pills */}
-            <div className="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+            <div className="hidden sm:flex items-center gap-2 sm:gap-4 text-xs font-mono">
               <span className="text-blue-400 font-bold">01. Discover</span>
               <span className="text-slate-600">➔</span>
               <span className="text-red-400 font-bold">02. Master</span>
@@ -268,3 +288,4 @@ export const ScrollShowcase = ({ onOpenJoinModal }) => {
     </section>
   );
 };
+
