@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <defs>
+    <linearGradient id="ecoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="greenGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#ecoBg)"/>
+  
+  <!-- Subtle Grid -->
+  <path d="M 0 60 H 640 M 0 120 H 640 M 0 180 H 640 M 0 240 H 640 M 0 300 H 640" stroke="#065F46" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+  <path d="M 80 0 V 360 M 160 0 V 360 M 240 0 V 360 M 320 0 V 360 M 400 0 V 360 M 480 0 V 360 M 560 0 V 360" stroke="#065F46" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+
+  <!-- Energy Chart Curve -->
+  <path d="M 60 260 Q 140 240 200 170 T 340 140 T 480 90 T 580 60 L 580 320 L 60 320 Z" fill="url(#greenGlow)"/>
+  <path d="M 60 260 Q 140 240 200 170 T 340 140 T 480 90 T 580 60" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Sensor Node Points -->
+  <circle cx="200" cy="170" r="7" fill="#34D399" stroke="#ECFDF5" stroke-width="3"/>
+  <circle cx="340" cy="140" r="7" fill="#34D399" stroke="#ECFDF5" stroke-width="3"/>
+  <circle cx="480" cy="90" r="7" fill="#34D399" stroke="#ECFDF5" stroke-width="3"/>
+  <circle cx="580" cy="60" r="7" fill="#6EE7B7" stroke="#ECFDF5" stroke-width="3"/>
+
+  <!-- Card Dashboard overlay -->
+  <g transform="translate(60, 40)">
+    <rect width="240" height="90" rx="12" fill="#042F2E" stroke="#10B981" stroke-width="1.5" opacity="0.9"/>
+    <text x="20" y="32" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#6EE7B7">ECOPULSE TELEMETRY</text>
+    <text x="20" y="65" font-family="'Inter', sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">-34.8% <tspan font-size="13" font-weight="500" fill="#34D399">CO2 Reduced</tspan></text>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(480, 290)">
+    <rect width="120" height="32" rx="16" fill="#10B981"/>
+    <text x="60" y="21" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">GCP Run + IoT</text>
+  </g>
+</svg>

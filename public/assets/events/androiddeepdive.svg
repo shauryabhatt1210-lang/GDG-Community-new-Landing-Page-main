@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <defs>
+    <linearGradient id="andBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#042F2E"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#andBg)"/>
+
+  <!-- Android Bot Graphic Right -->
+  <g transform="translate(450, 110)">
+    <!-- Android Head -->
+    <path d="M 10 90 A 60 60 0 0 1 130 90 Z" fill="#3DDC84"/>
+    <!-- Eyes -->
+    <circle cx="45" cy="65" r="6" fill="#042F2E"/>
+    <circle cx="95" cy="65" r="6" fill="#042F2E"/>
+    <!-- Antennas -->
+    <line x1="35" y1="45" x2="20" y2="20" stroke="#3DDC84" stroke-width="5" stroke-linecap="round"/>
+    <line x1="105" y1="45" x2="120" y2="20" stroke="#3DDC84" stroke-width="5" stroke-linecap="round"/>
+    <!-- Body -->
+    <rect x="10" y="100" width="120" height="80" rx="14" fill="#3DDC84"/>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(60, 45)">
+    <rect width="180" height="30" rx="15" fill="#065F46" stroke="#34D399" stroke-width="1.5"/>
+    <text x="90" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#D1FAE5" text-anchor="middle">JETPACK COMPOSE TALK</text>
+  </g>
+
+  <!-- Title -->
+  <text x="60" y="125" font-family="'Google Sans', 'Inter', sans-serif" font-size="40" font-weight="900" fill="#FFFFFF">Android 16 &amp;</text>
+  <text x="60" y="165" font-family="'Google Sans', 'Inter', sans-serif" font-size="34" font-weight="900" fill="#3DDC84">Modern Compose</text>
+  <text x="60" y="198" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#A7F3D0">Predictive Back • Material 3 Systems • Architecture Patterns</text>
+
+  <!-- Date & Venue -->
+  <g transform="translate(60, 230)">
+    <rect width="140" height="55" rx="10" fill="#042F2E" stroke="#10B981" stroke-width="1"/>
+    <text x="20" y="24" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#6EE7B7">DATE</text>
+    <text x="20" y="44" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Dec 19, 2026</text>
+
+    <rect x="155" width="160" height="55" rx="10" fill="#042F2E" stroke="#10B981" stroke-width="1"/>
+    <text x="175" y="24" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#6EE7B7">LOCATION</text>
+    <text x="175" y="44" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#A7F3D0">CS Lab 3B &amp; Stream</text>
+  </g>
+
+  <text x="60" y="325" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#D1FAE5">Live Codelabs &amp; Official Android Plushie Giveaways</text>
+</svg>

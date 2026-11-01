@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <!-- Left Bracket < (Blue & Red) -->
+  <path d="M 60 20 L 25 50 L 60 80" stroke="#4285F4" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Middle Slash / (Yellow) -->
+  <path d="M 75 80 L 100 20" stroke="#FBBC04" stroke-width="12" stroke-linecap="round"/>
+  <!-- Right Bracket > (Green & Red) -->
+  <path d="M 115 20 L 150 50 L 115 80" stroke="#34A853" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Google Dev Color Accent Dot -->
+  <circle cx="95" cy="50" r="5" fill="#EA4335" />
+  <!-- Text Brandmark -->
+  <text x="175" y="46" font-family="'Google Sans', 'Inter', system-ui, sans-serif" font-size="28" font-weight="700" fill="currentColor" letter-spacing="-0.5">GDG</text>
+  <text x="240" y="46" font-family="'Google Sans', 'Inter', system-ui, sans-serif" font-size="20" font-weight="400" fill="#EA4335">On Campus</text>
+  <text x="175" y="72" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748B" letter-spacing="1.5">GOOGLE DEVELOPER GROUPS</text>
+</svg>

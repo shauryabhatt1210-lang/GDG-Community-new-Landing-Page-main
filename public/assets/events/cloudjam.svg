@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+  <defs>
+    <linearGradient id="cjBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C4A6E"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#cjBg)"/>
+
+  <!-- Google Cloud Logo Graphic in Center -->
+  <g transform="translate(420, 70)" opacity="0.9">
+    <ellipse cx="70" cy="80" rx="60" ry="40" fill="#FFFFFF" opacity="0.15"/>
+    <!-- Cloud Path -->
+    <path d="M 40 100 A 30 30 0 0 1 70 50 A 45 45 0 0 1 120 70 A 30 30 0 0 1 140 100 A 25 25 0 0 1 120 130 H 45 A 25 25 0 0 1 40 100 Z" fill="#FFFFFF" opacity="0.9"/>
+    <!-- Cloud Badge Star -->
+    <circle cx="85" cy="95" r="16" fill="#FBBC04"/>
+    <polygon points="85,82 89,90 98,92 91,98 93,107 85,102 77,107 79,98 72,92 81,90" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Tag Pill -->
+  <g transform="translate(60, 45)">
+    <rect width="180" height="30" rx="15" fill="#0369A1" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="90" y="20" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#E0F2FE" text-anchor="middle">CLOUD STUDY JAM 2026</text>
+  </g>
+
+  <!-- Title -->
+  <text x="60" y="125" font-family="'Google Sans', 'Inter', sans-serif" font-size="38" font-weight="900" fill="#FFFFFF">Google Cloud</text>
+  <text x="60" y="165" font-family="'Google Sans', 'Inter', sans-serif" font-size="36" font-weight="900" fill="#FEF08A">Generative AI Sprint</text>
+  <text x="60" y="198" font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#BAE6FD">Vertex AI • Vector Search • Free Skill Boost Access</text>
+
+  <!-- Quick Info Pills -->
+  <g transform="translate(60, 230)">
+    <rect width="140" height="55" rx="10" fill="#0C4A6E" stroke="#38BDF8" stroke-width="1"/>
+    <text x="20" y="24" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#93C5FD">DATE</text>
+    <text x="20" y="44" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Nov 14, 2026</text>
+
+    <rect x="155" width="160" height="55" rx="10" fill="#0C4A6E" stroke="#38BDF8" stroke-width="1"/>
+    <text x="175" y="24" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#93C5FD">PERK</text>
+    <text x="175" y="44" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#4ADE80">$100 Cloud Credits</text>
+  </g>
+
+  <text x="60" y="325" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#E0F2FE">Earn Official Google Cloud Digital Skill Badges &amp; Swag</text>
+</svg>

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#EA4335" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#34A853" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#1A73E8"/>
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#9333EA"/>
+      <stop offset="100%" stop-color="#EA4335"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Circles -->
+  <circle cx="200" cy="180" r="140" fill="#4285F4" opacity="0.18" filter="url(#softGlow)" />
+  <circle cx="620" cy="220" r="160" fill="#34A853" opacity="0.15" filter="url(#softGlow)" />
+  <circle cx="400" cy="450" r="150" fill="#FBBC04" opacity="0.12" filter="url(#softGlow)" />
+  <circle cx="680" cy="440" r="120" fill="#EA4335" opacity="0.15" filter="url(#softGlow)" />
+
+  <!-- Connecting Circuit Grid Lines -->
+  <path d="M 120 300 H 260 L 320 220 H 500 L 560 320 H 700" stroke="#64748B" stroke-width="2" stroke-dasharray="6 6" opacity="0.4" />
+  <path d="M 220 150 V 260 L 300 340 V 480" stroke="#4285F4" stroke-width="2" stroke-dasharray="4 4" opacity="0.5" />
+  <path d="M 580 140 V 240 L 500 320 V 460" stroke="#34A853" stroke-width="2" stroke-dasharray="4 4" opacity="0.5" />
+
+  <!-- Main IDE / Terminal Window -->
+  <g transform="translate(140, 110)">
+    <!-- Terminal Background Shadow -->
+    <rect x="0" y="0" width="520" height="340" rx="16" fill="#020617" opacity="0.4" transform="translate(10, 15)"/>
+    <rect x="0" y="0" width="520" height="340" rx="16" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+    
+    <!-- Window Bar -->
+    <rect x="0" y="0" width="520" height="42" rx="16" fill="#1E293B" />
+    <rect x="0" y="30" width="520" height="12" fill="#1E293B" />
+    <circle cx="24" cy="21" r="6" fill="#EA4335" />
+    <circle cx="44" cy="21" r="6" fill="#FBBC04" />
+    <circle cx="64" cy="21" r="6" fill="#34A853" />
+    <rect x="190" y="11" width="140" height="20" rx="6" fill="#0F172A" />
+    <text x="215" y="25" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">gdg-main.py</text>
+
+    <!-- Code Content -->
+    <text x="30" y="80" font-family="'JetBrains Mono', monospace" font-size="13" fill="#EA4335">from</text>
+    <text x="75" y="80" font-family="'JetBrains Mono', monospace" font-size="13" fill="#93C5FD">google_dev</text>
+    <text x="175" y="80" font-family="'JetBrains Mono', monospace" font-size="13" fill="#EA4335">import</text>
+    <text x="235" y="80" font-family="'JetBrains Mono', monospace" font-size="13" fill="#FDE047">Community, Innovation</text>
+
+    <text x="30" y="110" font-family="'JetBrains Mono', monospace" font-size="13" fill="#64748B"># Initialize GDG Builder Pipeline</text>
+    <text x="30" y="140" font-family="'JetBrains Mono', monospace" font-size="13" fill="#38BDF8">def</text>
+    <text x="65" y="140" font-family="'JetBrains Mono', monospace" font-size="13" fill="#4ADE80">build_future</text>
+    <text x="180" y="140" font-family="'JetBrains Mono', monospace" font-size="13" fill="#E2E8F0">(curiosity, passion):</text>
+
+    <text x="50" y="170" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">community = Community(track=</text>
+    <text x="280" y="170" font-family="'JetBrains Mono', monospace" font-size="13" fill="#FBBF24">"Google Cloud + AI"</text>
+    <text x="430" y="170" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">)</text>
+
+    <text x="50" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">skills = [</text>
+    <text x="135" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#34D399">"Gemini 1.5"</text>
+    <text x="230" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">, </text>
+    <text x="245" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#60A5FA">"Flutter 3"</text>
+    <text x="330" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">, </text>
+    <text x="345" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#F87171">"Kubernetes"</text>
+    <text x="440" y="200" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">]</text>
+
+    <text x="50" y="230" font-family="'JetBrains Mono', monospace" font-size="13" fill="#EA4335">for</text>
+    <text x="82" y="230" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">skill</text>
+    <text x="130" y="230" font-family="'JetBrains Mono', monospace" font-size="13" fill="#EA4335">in</text>
+    <text x="155" y="230" font-family="'JetBrains Mono', monospace" font-size="13" fill="#CBD5E1">skills:</text>
+    
+    <text x="70" y="260" font-family="'JetBrains Mono', monospace" font-size="13" fill="#38BDF8">community.ship_impact</text>
+    <text x="245" y="260" font-family="'JetBrains Mono', monospace" font-size="13" fill="#E2E8F0">(skill, mentor=</text>
+    <text x="365" y="260" font-family="'JetBrains Mono', monospace" font-size="13" fill="#4ADE80">True</text>
+    <text x="400" y="260" font-family="'JetBrains Mono', monospace" font-size="13" fill="#E2E8F0">)</text>
+
+    <text x="50" y="295" font-family="'JetBrains Mono', monospace" font-size="13" fill="#EA4335">return</text>
+    <text x="110" y="295" font-family="'JetBrains Mono', monospace" font-size="13" fill="#38BDF8">"Impact 100% Deployed 🚀"</text>
+
+    <!-- Glowing blinking cursor -->
+    <rect x="335" y="282" width="8" height="17" fill="#4285F4" opacity="0.9" />
+  </g>
+
+  <!-- Floating Badge: Gemini 1.5 Pro AI -->
+  <g transform="translate(60, 260)">
+    <rect x="0" y="0" width="180" height="64" rx="14" fill="#0F172A" stroke="#3B82F6" stroke-width="1.5" filter="url(#softGlow)"/>
+    <rect x="0" y="0" width="180" height="64" rx="14" fill="#1E293B" stroke="#3B82F6" stroke-width="1.5"/>
+    <circle cx="28" cy="32" r="16" fill="url(#geminiGrad)" />
+    <!-- Sparkle -->
+    <path d="M 28 22 Q 28 32 38 32 Q 28 32 28 42 Q 28 32 18 32 Q 28 32 28 22 Z" fill="#FFFFFF" />
+    <text x="54" y="29" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Gemini AI</text>
+    <text x="54" y="46" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Next-Gen Multimodal</text>
+  </g>
+
+  <!-- Floating Badge: Flutter 3 App -->
+  <g transform="translate(580, 80)">
+    <rect x="0" y="0" width="180" height="64" rx="14" fill="#0F172A" stroke="#0284C7" stroke-width="1.5" filter="url(#softGlow)"/>
+    <rect x="0" y="0" width="180" height="64" rx="14" fill="#1E293B" stroke="#0284C7" stroke-width="1.5"/>
+    <rect x="14" y="16" width="32" height="32" rx="8" fill="#0284C7" />
+    <!-- Flutter bird icon shape -->
+    <path d="M 22 28 L 30 20 H 38 L 26 32 L 38 44 H 30 L 22 36 L 26 32 Z" fill="#FFFFFF" />
+    <text x="56" y="29" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Flutter & Dart</text>
+    <text x="56" y="46" font-family="'Inter', sans-serif" font-size="11" fill="#38BDF8">Multiplatform Speed</text>
+  </g>
+
+  <!-- Floating Badge: Google Cloud Certified -->
+  <g transform="translate(560, 390)">
+    <rect x="0" y="0" width="190" height="70" rx="14" fill="#0F172A" stroke="#10B981" stroke-width="1.5" filter="url(#softGlow)"/>
+    <rect x="0" y="0" width="190" height="70" rx="14" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="32" cy="35" r="18" fill="#059669" />
+    <path d="M 24 35 L 30 41 L 40 29" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="60" y="30" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Cloud Verified</text>
+    <text x="60" y="48" font-family="'Inter', sans-serif" font-size="11" fill="#34D399">Skill Badges & Sprints</text>
+  </g>
+
+  <!-- Floating Badge: 2,500+ Community -->
+  <g transform="translate(80, 420)">
+    <rect x="0" y="0" width="195" height="66" rx="14" fill="#0F172A" stroke="#F59E0B" stroke-width="1.5" filter="url(#softGlow)"/>
+    <rect x="0" y="0" width="195" height="66" rx="14" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+    <circle cx="30" cy="33" r="16" fill="#D97706" />
+    <!-- Users icon -->
+    <path d="M 24 39 C 24 35 27 34 30 34 C 33 34 36 35 36 39" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="30" cy="27" r="4" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="56" y="28" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">2,500+ Builders</text>
+    <text x="56" y="46" font-family="'Inter', sans-serif" font-size="11" fill="#FBBF24">Active Peer Network</text>
+  </g>
+
+  <!-- Interactive 4-color GDG Bar Bottom Accent -->
+  <g transform="translate(260, 480)">
+    <rect x="0" y="0" width="70" height="6" rx="3" fill="#4285F4"/>
+    <rect x="75" y="0" width="70" height="6" rx="3" fill="#EA4335"/>
+    <rect x="150" y="0" width="70" height="6" rx="3" fill="#FBBC04"/>
+    <rect x="225" y="0" width="70" height="6" rx="3" fill="#34A853"/>
+  </g>
+</svg>

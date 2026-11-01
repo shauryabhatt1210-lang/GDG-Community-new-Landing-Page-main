@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <defs>
+    <!-- Soft 3D Lighting Gradients -->
+    <linearGradient id="minifigYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE033"/>
+      <stop offset="100%" stop-color="#F5B800"/>
+    </linearGradient>
+    <linearGradient id="hardhatRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E38"/>
+      <stop offset="100%" stop-color="#C4000A"/>
+    </linearGradient>
+    <linearGradient id="vestOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7A00"/>
+      <stop offset="100%" stop-color="#E05500"/>
+    </linearGradient>
+    <linearGradient id="blueLegs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0077D4"/>
+      <stop offset="100%" stop-color="#004D8C"/>
+    </linearGradient>
+    <linearGradient id="brickRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B30"/>
+      <stop offset="100%" stop-color="#BA0D04"/>
+    </linearGradient>
+    <linearGradient id="brickBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0084FF"/>
+      <stop offset="100%" stop-color="#0052A3"/>
+    </linearGradient>
+    <linearGradient id="brickGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34C759"/>
+      <stop offset="100%" stop-color="#1E7B35"/>
+    </linearGradient>
+    
+    <filter id="brickShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Floating 3D Background LEGO Bricks (Blurred for depth of field like Image 2) -->
+  <g opacity="0.4" filter="url(#softGlow)">
+    <!-- Floating Red Brick Top Left -->
+    <g transform="translate(40, 50) rotate(-18)">
+      <ellipse cx="25" cy="-2" rx="10" ry="4" fill="#FF5252"/>
+      <ellipse cx="55" cy="-2" rx="10" ry="4" fill="#FF5252"/>
+      <rect x="0" y="0" width="80" height="45" rx="6" fill="url(#brickRed)"/>
+    </g>
+    <!-- Floating Blue Brick Top Right -->
+    <g transform="translate(480, 70) rotate(22)">
+      <ellipse cx="22" cy="-2" rx="9" ry="4" fill="#40A9FF"/>
+      <rect x="0" y="0" width="45" height="45" rx="6" fill="url(#brickBlue)"/>
+    </g>
+    <!-- Floating Green Brick Bottom Right -->
+    <g transform="translate(460, 410) rotate(-12)">
+      <ellipse cx="25" cy="-2" rx="10" ry="4" fill="#5CDB87"/>
+      <ellipse cx="55" cy="-2" rx="10" ry="4" fill="#5CDB87"/>
+      <rect x="0" y="0" width="80" height="42" rx="6" fill="url(#brickGreen)"/>
+    </g>
+  </g>
+
+  <!-- Ground Shadow under Minifigure -->
+  <ellipse cx="300" cy="470" rx="130" ry="22" fill="#000000" opacity="0.22" filter="url(#brickShadow)"/>
+
+  <!-- ======================================================== -->
+  <!-- HERO LEGO MINIFIGURE CHARACTER (Emmet Style Developer)   -->
+  <!-- ======================================================== -->
+  <g transform="translate(195, 60)" filter="url(#brickShadow)">
+    
+    <!-- 1. Hard Hat / Helmet (Red Construction Cap with Top Stud) -->
+    <g>
+      <!-- Helmet Peak / Brim -->
+      <path d="M 40 100 Q 105 78 170 100 Q 155 110 55 110 Z" fill="#990006"/>
+      <!-- Main Dome -->
+      <path d="M 46 98 Q 105 40 164 98 Q 150 112 60 112 Z" fill="url(#hardhatRed)"/>
+      <!-- Helmet Center Ridge -->
+      <path d="M 98 48 Q 105 45 112 48 L 114 100 L 96 100 Z" fill="#FF5A62"/>
+      <!-- Top Stud Button -->
+      <ellipse cx="105" cy="46" rx="12" ry="5" fill="#FF7077"/>
+    </g>
+
+    <!-- 2. Minifigure Head (Iconic Yellow Cylinder with Cheerful Smile) -->
+    <g transform="translate(60, 92)">
+      <!-- Head Base -->
+      <rect x="10" y="0" width="70" height="66" rx="20" fill="url(#minifigYellow)" stroke="#D49B00" stroke-width="1.5"/>
+      <!-- Neck Base -->
+      <rect x="25" y="60" width="40" height="12" rx="4" fill="#D49B00"/>
+
+      <!-- Friendly Big Eyes with White Catchlights -->
+      <ellipse cx="30" cy="28" rx="5" ry="6.5" fill="#1E293B"/>
+      <circle cx="28.5" cy="26" r="1.8" fill="#FFFFFF"/>
+      
+      <ellipse cx="60" cy="28" rx="5" ry="6.5" fill="#1E293B"/>
+      <circle cx="58.5" cy="26" r="1.8" fill="#FFFFFF"/>
+
+      <!-- Cheerful Eyebrows -->
+      <path d="M 23 18 Q 30 14 37 18" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M 53 18 Q 60 14 67 18" stroke="#1E293B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+      <!-- Big Smiling Mouth with White Teeth & Red Tongue -->
+      <path d="M 28 39 Q 45 60 62 39 Z" fill="#1E293B"/>
+      <path d="M 32 41 Q 45 47 58 41 Q 45 39 32 41 Z" fill="#FFFFFF"/>
+      <path d="M 37 49 Q 45 54 53 49 Q 45 47 37 49 Z" fill="#FF4D4D"/>
+    </g>
+
+    <!-- 3. Torso (Orange Safety Vest with Developer Badges) -->
+    <g transform="translate(38, 160)">
+      <!-- Torso Trapezoid Body -->
+      <path d="M 25 0 L 110 0 L 126 130 L 8 130 Z" fill="url(#vestOrange)" stroke="#B34400" stroke-width="1.5"/>
+
+      <!-- Blue Collar Inner Shirt -->
+      <polygon points="50,0 85,0 67,28" fill="#006CB7"/>
+      <!-- Inner White Undershirt -->
+      <polygon points="58,0 77,0 67,14" fill="#FFFFFF"/>
+
+      <!-- Silver Reflective Safety Stripes -->
+      <rect x="28" y="38" width="80" height="12" fill="#E2E8F0" opacity="0.95"/>
+      <rect x="24" y="85" width="88" height="12" fill="#E2E8F0" opacity="0.95"/>
+      <!-- Vertical Silver Straps -->
+      <rect x="42" y="10" width="10" height="115" fill="#CBD5E1"/>
+      <rect x="84" y="10" width="10" height="115" fill="#CBD5E1"/>
+
+      <!-- GDG Developer Name Badge -->
+      <rect x="74" y="56" width="30" height="18" rx="3" fill="#FFFFFF" stroke="#0F172A" stroke-width="1"/>
+      <rect x="77" y="60" width="12" height="3" fill="#4285F4"/>
+      <rect x="77" y="65" width="22" height="2" fill="#EA4335"/>
+      <rect x="77" y="69" width="18" height="2" fill="#34A853"/>
+
+      <!-- Zipper Center Line -->
+      <line x1="67" y1="28" x2="67" y2="130" stroke="#782E00" stroke-width="2"/>
+    </g>
+
+    <!-- 4. Arms & Iconic C-Hands -->
+    <!-- Left Arm -->
+    <g transform="translate(18, 160)">
+      <path d="M 25 10 Q 0 45 0 90 Q 5 110 20 100 L 32 30 Z" fill="#E05500"/>
+      <!-- Blue Cuff -->
+      <ellipse cx="12" cy="98" rx="11" ry="7" fill="#006CB7"/>
+      <!-- Yellow C-Hand -->
+      <path d="M 5 105 C 0 115 0 130 14 132 C 24 133 26 122 20 116 C 16 112 16 108 22 105 Z" fill="url(#minifigYellow)" stroke="#B38600" stroke-width="1.5"/>
+    </g>
+
+    <!-- Right Arm (Raised in Celebration/Wave like Image 2!) -->
+    <g transform="translate(142, 120)">
+      <path d="M 8 45 Q 35 15 45 -5 Q 60 5 40 40 L 16 75 Z" fill="#E05500"/>
+      <!-- Blue Cuff -->
+      <ellipse cx="44" cy="5" rx="10" ry="8" fill="#006CB7" transform="rotate(-30, 44, 5)"/>
+      <!-- Yellow C-Hand (Raised Waving) -->
+      <path d="M 46 -3 C 58 -12 68 -2 62 10 C 58 18 48 16 46 8 Z" fill="url(#minifigYellow)" stroke="#B38600" stroke-width="1.5"/>
+    </g>
+
+    <!-- 5. Hips & Blue Pants/Legs -->
+    <g transform="translate(42, 290)">
+      <!-- Dark Blue Hips Joint -->
+      <path d="M 5 0 L 123 0 L 118 25 L 10 25 Z" fill="#003E73"/>
+      
+      <!-- Left Leg -->
+      <rect x="8" y="22" width="52" height="85" rx="6" fill="url(#blueLegs)" stroke="#00294D" stroke-width="1.5"/>
+      <!-- Left Foot -->
+      <rect x="8" y="88" width="52" height="24" rx="4" fill="#002D54"/>
+
+      <!-- Right Leg -->
+      <rect x="68" y="22" width="52" height="85" rx="6" fill="url(#blueLegs)" stroke="#00294D" stroke-width="1.5"/>
+      <!-- Right Foot -->
+      <rect x="68" y="88" width="52" height="24" rx="4" fill="#002D54"/>
+    </g>
+
+  </g>
+
+  <!-- Foreground Stacked 2x2 Clean Shiny Red LEGO Brick (Front Left) -->
+  <g transform="translate(70, 360)" filter="url(#brickShadow)">
+    <ellipse cx="25" cy="-2" rx="13" ry="6" fill="#FF5252"/>
+    <ellipse cx="65" cy="-2" rx="13" ry="6" fill="#FF5252"/>
+    <rect x="0" y="0" width="90" height="52" rx="8" fill="url(#brickRed)" stroke="#800004" stroke-width="1.5"/>
+    <text x="45" y="32" font-family="'Inter', sans-serif" font-size="12" font-weight="900" fill="#FFFFFF" text-anchor="middle">LEGO</text>
+  </g>
+</svg>
